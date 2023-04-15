@@ -11,6 +11,8 @@ dst_dir = "."
 print("Downloading the files...")
 
 # Removing directories if they exist
+if os.path.exists("config.js"):
+    os.remove("config.js")
 if os.path.exists("cities"):
     shutil.rmtree("cities")
 if os.path.exists("stations"):
