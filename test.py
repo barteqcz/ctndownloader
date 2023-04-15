@@ -8,7 +8,7 @@ url = 'https://github.com/barteqcz/ctn/archive/refs/heads/main.zip' # URL to the
 src_dir = "ctn-main"
 dst_dir = "."
 
-print("Updating the files...")
+print("Downloading the files...")
 
 # Download the zip file
 response = urllib.request.urlopen(url)
@@ -29,7 +29,7 @@ os.rmdir(src_dir)
 
 os.remove("README.md")
 os.remove("LICENSE.md")
-print("Updated the files successfully ^^")
+print("Downloaded the files successfully ^^")
 
 # Wait for the user to press a key
 input("Press any key to exit...")
