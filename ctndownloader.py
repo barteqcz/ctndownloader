@@ -11,7 +11,7 @@ dst_dir = "."
 print("Downloading the files...")
 
 # Checking whether the directories and file exist
-if os.exists(config.js):
+if os.path.exists(config.js):
     os.remove(config.js)
 
 if os.path.exists(cities):
