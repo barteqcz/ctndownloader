@@ -10,16 +10,12 @@ dst_dir = "."
 
 print("Downloading the files...")
 
-# Checking whether the directories and file exist
-if os.path.exists("config.js"):
-    os.remove("config.js")
-
+# Removing directories if they exist
 if os.path.exists("cities"):
-    os.rmdir("cities")
-
+    shutil.rmtree("cities")
 if os.path.exists("stations"):
-    os.rmdir("stations")
-    
+    shutil.rmtree("stations")
+
 # Download the zip file
 response = urllib.request.urlopen(url)
 zip_file = io.BytesIO(response.read())
